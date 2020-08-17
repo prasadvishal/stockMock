@@ -56,7 +56,7 @@ var stocksSchema = new Schema({
 
 var Stocks = mongoose.model('stocks', stocksSchema);
 
-var cronJob = new CronJob("0 */1 * * * * ", async function() { // Cron to update db data every 2mins past 08:00:00 till 16:00:00
+var cronJob = new CronJob("0 */1 8-16 * * * ", async function() { // Cron to update db data every 2mins past 08:00:00 till 16:00:00
     console.log("\n\n\nCRON running at----------------", new Date());
     await updateStocks(new Date());
 });
