@@ -18,17 +18,6 @@ app.get('/', function(req, res){
     res.send("I am Listening.")
 });
 app.listen(config.PORT, () => {
-    // global.DBConnection = null;
-    // sequelize.authenticate().then(() => {
-    //     console.log('Connected to MySQL ' + mysql_db.database + ' database.');
-    //     global.DBConnection = sequelize;
-    // }).catch(err => {
-    //     console.error('Unable to connect to the database ' + mysql_db.database + ' :', err);
-    //     global.DBConnection = null;
-    // });
-    // var apiRoute = require('./routes/nseRoutes') (app, router);
-    // // createDbConnection();
-
     // establish connection to mongodb
     mongoose.Promise = global.Promise; // Mongoose
     //console.log("db string", config.DB_URL)
